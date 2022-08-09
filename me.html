@@ -541,7 +541,7 @@
 
     </div>
 
-    <h2>Problem 2 <button class="problemState" id="button1">⏶</button></h2>
+    <h2>Problem 2 (incomplete) <button class="problemState" id="button1">⏶</button></h2>
     <div id="problem1">
         <h3>a)</h3> \(ps+qt+ru=pu+qs+rt=pt+qu+rs\) <br><br>
         \(qt+ru-qs-rs=pu+rt-ps-rs=pt+qu-ps-qs\)<br><br>
@@ -552,6 +552,8 @@
         \(qx-rx=py-ry\)<br>\(qx-px=qy-ry\)<br>\(rx-px=qy-py\)<br><br>
         \(x\left(q-r\right)=y\left(p-r\right)\)<br>\(x\left(q-p\right)=y\left(q-r\right)\)<br>\(x\left(r-p\right)=y\left(q-p\right)\)<br><br>
         \(\frac{x}{y}=\frac{p-r}{q-r}\)<br><br>\(\frac{x}{y}=\frac{q-r}{q-p}\)<br><br>\(\frac{x}{y}=\frac{q-p}{r-p}\)<br><br>
+        <h3>c)</h3> \(\frac{t-s}{u-s}=\frac{p-r}{q-r}\)<br><br>\(\frac{t-s}{u-s}=\frac{q-r}{q-p}\)<br><br>\(\frac{t-s}{u-s}=\frac{q-p}{r-p}\)<br><br>
+
     </div>
 
     <h2>Problem 3 <button class="problemState" id="button2">⏶</button></h2>
@@ -592,7 +594,7 @@
 
     <h2>Problem 6 <button class="problemState" id="button5">⏶</button></h2>
     <div id="problem5">
-        The numbers that satisfy the problem are: <br>
+        The numbers that satisfy the problem are: <br><br>
         <div id="problem5Answers"></div><br>
         <script>
             /*
@@ -600,28 +602,21 @@
                 That when the first digit is moved to the last and the number converted to base 7 equals the first.
             */
 
-            // Define variables for various 3 digits
-            var a, b, c;
             // Generate first digit
             for (var i = 1; i < 10; i++) {
-                a = i
                 // Generate second digit
                 for (var j = 0; j < 10; j++) {
-                    b = j
                     // Generate third digit
                     for (var k = 0; k < 10; k++) {
-                        c = k
                         // Generate the base 10 number based on the digits: a x 10^2 + b x 10^1 + c x 10^0
-                        base10 = (a * 100) + (b * 10) + c
+                        base10 = (i * 100) + (j * 10) + k
                         // Generate the to be displayed base 7 number. It is generated in base 10, because that's the format it has to be displayed in
-                        pretendBase7 = (b * 100) + (c * 10) + a
+                        pretendBase7 = (j * 100) + (k * 10) + i
                         // Generate the real base 7 number based on the digits: b x 7^2 + c x 7^1 + a x 7^0
-                        realBase7 = (b * 49) + (c * 7) + a
+                        realBase7 = (j * 49) + (k * 7) + i
                         // If the base 10 number is equal to the base 7 number with the first digit moved to the last:
                         if (base10 == realBase7) {
-                            // Print both numbers in the console
-                            console.log(base10.toString() + " (base 10) whcih equals " + pretendBase7.toString() + " (base 7)");
-                            // And display both numbers under the answer heading
+                            // Display both numbers under the answer heading
                             $("#problem5Answers").append(base10.toString() + " (base 10) which equals " + pretendBase7.toString() + " (base 7) <br>")
                         }
                     }
@@ -631,12 +626,77 @@
         These numbers are generated from code I created that can be found <a href="https://github.com/frlegg/maths-journal/blob/main/me.html#L598">here</a>
     </div>
 
+    <h2>Problem 9 (incomplete)<button class="problemState" id="button8">⏶</button></h2>
+    <div id="problem8">
+        <h3>a)</h3>
+        \(n\) - the difference, when the number of fields is \(2n+1\): <input type="text" value="4" />
+        Don't enter in negative numbers, or you'll crash the web page.
+        <div id="problem8answers"><svg height="600" width="600">
+                <circle cx="300" cy="300" r="200" stroke="black" stroke-width="5" fill="transparent" />
+            </svg>
+        </div>
+        <script>
+            numbers = []
+
+            function orderNumbers() {
+                numbers = []
+                number = 1
+                n = parseInt($('input:text').val())
+                while (numbers.length != (n * 2 + 1)) {
+                    numbers.push(number)
+                    if (number < n + 1) {
+                        number += n + 1
+                    } else {
+                        number -= n
+                    }
+                }
+            }
+
+            function createFields() {
+                orderNumbers()
+                $('.field').remove();
+                var container = $('#problem8answers');
+                for (var i = 0; i < +(($('input:text').val()) * 2 + 1); i++) {
+                    container.append(`<div class="field"><div class="centered">` + (numbers[i]) + `</div></div>`)
+                }
+            }
+
+            function distributeFields() {
+                var radius = 200;
+                var fields = $('.field'),
+                    container = $('#problem8answers'),
+                    width = container.width(),
+                    height = container.height(),
+                    angle = 0,
+                    step = (2 * Math.PI) / fields.length;
+                fields.each(function() {
+                    var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);
+                    var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
+                    $(this).css({
+                        left: x + 'px',
+                        top: y + 'px'
+                    });
+                    angle += step;
+                });
+            }
+
+            $('input').change(function() {
+                createFields();
+                distributeFields();
+            });
+
+            createFields();
+            distributeFields();
+        </script>
+    </div>
+
     <div class="row">
         <a href="https://frlegg.github.io/maths-journal/">Go back to the homepage</a>
         <a href="https://github.com/frlegg/maths-journal">See the code</a>
     </div>
 
     <script>
+        // This is button stuff, ignore it.
         var states = [true, true, true];
         $(".problemState").on("click", function() {
             var id = $(this).attr("id").split("")
