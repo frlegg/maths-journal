@@ -558,7 +558,7 @@
 
     <h2>Problem 3 <button class="problemState" id="button2">⏶</button></h2>
     <div id="problem2">
-        <h3>a)</h3> <Br> \((x^2+2)^2\)<br><br>
+        <h3>a)</h3> <br> \((x^2+2)^2\)<br><br>
         \(=x^2(x^2+2)+2(x^2+2)\)<br><br>
         \(=x^4+2x^2+2x^2+4\)<br><br>
         \(=x^4+4x^2+4\)<br><br>
@@ -592,6 +592,42 @@
         \(-\frac{463}{7}\)
     </div>
 
+    <h2>Problem 5 <button class="problemState" id="button4">⏶</button></h2>
+    <div id="problem4">
+        <h3>a) i)</h3> <br> Show that \(\frac{1}{a_{n}a_{n+1}}=\frac{1}{da_{n}}-\frac{1}{da_{n+1}}\) <br><br>
+        Firstly (as this will be useful later), we need to prove \(d = a_{n+1}-a_{n}\) <br>
+        As \(a_{n}=a_{n-1}+d\), <br>
+        \(d=a_{n}-a_{n-1}\) <br>
+        which is the same as \(d = a_{n+1}-a_{n}\) <br><br>
+        Show that \(\frac{1}{a_{n}a_{n+1}}=\frac{1}{da_{n}}-\frac{1}{da_{n+1}}\) <br><br>
+        \(\frac{1}{da_{n}}-\frac{1}{da_{n+1}}=\frac{da_{n+1}-da_{n}}{d^{2}a_{n}a_{n+1}}\) <br><br>
+        \(\frac{da_{n+1}-da_{n}}{d^{2}a_{n}a_{n+1}}=\frac{a_{n+1}-a_{n}}{da_{n}a_{n+1}}\) <br><br>
+        \(\frac{a_{n+1}-a_{n}}{da_{n}a_{n+1}}=\frac{d}{da_{n}a_{n+1}}\) <br><br>
+        \(\frac{d}{da_{n}a_{n+1}}=\frac{1}{a_{n}a_{n+1}}\) <br><br>
+        Therefore \(\frac{1}{a_{n}a_{n+1}}=\frac{1}{da_{n}}-\frac{1}{da_{n+1}}\) <br><br>
+        <h3>ii)</h3> <br> Show that \(\frac{1}{a_{1}a_{2}}+\frac{1}{a_{2}a_{3}}+...\ +\ \frac{1}{a_{99}a_{100}}=\frac{99}{a_{1}a_{100}}\) <br><br>
+        Because we have shown \(\frac{1}{a_{n}a_{n+1}}=\frac{1}{da_{n}}-\frac{1}{da_{n+1}}\), therefore we should replace all \(\frac{1}{a_{n}a_{n+1}}\) accordingly<br><br>
+        If we do this then we receive \(\frac{1}{da_{1}}-\frac{1}{da_{2}}+\frac{1}{da_{2}}-\frac{1}{da_{3}}+\frac{1}{da_{3}}-\frac{1}{da_{4}}+...\ +\frac{1}{da_{98}}-\frac{1}{da_{99}}+\frac{1}{da_{99}}-\frac{1}{da_{100}}\) <br><br>
+        \(=\frac{1}{da_{1}}-\frac{1}{da_{100}}\) <br><br>
+        \(=\frac{a_{100}-a_{1}}{da_{1}a_{100}}\) <br><br>
+        Now, we'll substitute \(a_{100}\) for \(a_{1}+99d\) because \(a_{n}=a_{1}+d\left(n-1\right)\) which gives <br><br>
+        \(\frac{a_{1}+99d-a_{1}}{da_{1}a_{100}}\) <br><br>
+        \(=\frac{99d}{da_{1}a_{100}}\) <br><br>
+        \(=\frac{99}{a_{1}a_{100}}\) <br><br>
+        Therefore \(\frac{1}{a_{1}a_{2}}+\frac{1}{a_{2}a_{3}}+...\ +\ \frac{1}{a_{99}a_{100}}=\frac{99}{a_{1}a_{100}}\)
+        <h3>b)</h3>
+        Consider this: <br>
+        \(\frac{1}{i\left(i+4\right)}=\frac{1}{i\left(i+4\right)}\) <br><br>
+        \(\frac{1}{i\left(i+4\right)}+\frac{1}{\left(i+4\right)\left(i+8\right)}=\frac{2}{i\left(i+8\right)}\) <br><br>
+        \(\frac{1}{i\left(i+4\right)}+\frac{1}{\left(i+4\right)\left(i+8\right)}+\frac{1}{\left(i+8\right)\left(i+12\right)}=\frac{3}{i\left(i+12\right)}\)<br><br>
+        \(\frac{1}{i\left(i+4\right)}+\frac{1}{\left(i+4\right)\left(i+8\right)}+\frac{1}{\left(i+8\right)\left(i+12\right)}+\frac{1}{\left(i+12\right)\left(i+16\right)}=\frac{4}{i\left(i+16\right)}\)<br><br>
+        Therefore, when \(a_{n}=\frac{1}{\left(i+4\left(n-1\right)\right)\left(i+4n\right)}\), <br><br> \(a_{1}+...+a_{n}=\frac{n}{i\left(i+4n\right)}\)<br><br>
+        In this problem, \(i = 3\), so \(a_{1}+...+a_{n}=\frac{n}{3\left(3+4n\right)}\), and \(a_{1}+...+a_{n}=\frac{2}{25}\), therefore \(\frac{n}{3\left(3+4n\right)}=\frac{2}{25}\)<br><br>
+        Therefore, \(25n=6\left(3+4n\right)=18+24n\), and \(25n-24n=18\), so \(n=18\)<br><br>
+        Therefore, the last term in our sequence is \(a_18\), and because \(a_{n}=\frac{1}{\left(3+4\left(n-1\right)\right)\left(3+4n\right)}\) <br><br>
+        \(a_{18}=\frac{1}{71\ \times 75}\), so \(k = 71\)
+    </div>
+
     <h2>Problem 6 <button class="problemState" id="button5">⏶</button></h2>
     <div id="problem5">
         The numbers that satisfy the problem are: <br><br>
@@ -623,7 +659,106 @@
                 }
             }
         </script>
-        These numbers are generated from code I created that can be found <a href="https://github.com/frlegg/maths-journal/blob/main/me.html#L598">here</a>
+        These numbers are generated from code I created that can be found <a href="https://github.com/frlegg/maths-journal/blob/main/me.html#L636">here</a>
+    </div>
+
+    <h2>Problem 8<button class="problemState" id="button7">⏶</button></h2>
+    <div id="problem7">
+        These numbers are generated from code I created that can be found <a href="https://github.com/frlegg/maths-journal/blob/main/me.html#L678">here</a>
+        <img style="width: 80vw; height: 100%" src="./assets/problem8.png">
+        <h3>a)</h3>
+        <div id="problem7answersparta">All the possible solutions are: <br></div>
+        <h3>b)</h3>
+        <div id="problem7answerspartb">According to all the results, the lowest solution is: <br></div>
+        <h3>c)</h3>
+        <div id="problem7answerspartc">The puzzle can be completed according to the question's requirements with these solutions: <br></div>
+        <script>
+            // A variable that counts the number of the solutions so far
+            solutionCounter = 0;
+            // A list that will have magic totals added to it to later find what the lowest one is
+            magicTotals = []
+            // Solutions to part C. If there are no solutions in the list at the end, it will display that "The program yielded no solutions according to the question's requirements"
+            partCSolutions = []
+
+            // Several loops to generate a sequence of numbers from 1 to 9.
+            // i is first number in sequence, j is second number in sequence, k is third number in sequence...
+            for (var i = 1; i < 10; i++) {
+                for (var j = 1; j < 10; j++) {
+                    // If i and j are not the same then we can continue generating numbers. This is so we don't get sequences like [1,1,3,5,2,6,9,7,4] where there are repeating numbers
+                    if (j != i)
+                        for (var k = 1; k < 10; k++) {
+                            // if k and i are not the same AND if k and j are not the same. This is once again just so we don't get repeating numbers in our sequences
+                            if ((k != i) && (k != j))
+                                for (var l = 1; l < 10; l++) {
+                                    if ((l != i) && (l != j) && (l != k))
+                                        // Just more and more of this.
+                                        for (var m = 1; m < 10; m++) {
+                                            if ((m != i) && (m != j) && (m != k) && (m != l))
+                                                for (var n = 1; n < 10; n++) {
+                                                    if ((n != i) && (n != j) && (n != k) && (n != l) && (n != m))
+                                                        for (var o = 1; o < 10; o++) {
+                                                            if ((o != i) && (o != j) && (o != k) && (o != l) && (o != m) && (o != n))
+                                                                for (var p = 1; p < 10; p++) {
+                                                                    if ((p != i) && (p != j) && (p != k) && (p != l) && (p != m) && (p != n) && (p != o))
+                                                                        for (var q = 1; q < 10; q++) {
+                                                                            /* Finally! Something different!
+                                                                            Basically, this massive condition in the if statement is making sure that
+                                                                            1. q is not the same as any other number AND
+                                                                            2. The vertex sums of each shaded triangle are equal. These vertex sums are
+                                                                            - i + j + k
+                                                                            - j + l + m
+                                                                            - k + m + n
+                                                                            - m + o + p
+                                                                            So, if q is a unique number, and there is a consistent magic total we can continue...
+                                                                            */
+                                                                            if (
+                                                                                ((q != i) && (q != j) && (q != k) && (q != l) && (q != m) && (q != n) && (q != o) && (q != p)) &&
+                                                                                (
+                                                                                    (((i + j + k) == (j + l + m)) && ((i + j + k) == (k + m + n)) && ((i + j + k) == (m + o + p))) &&
+                                                                                    (((j + l + m) == (k + m + n)) && ((j + l + m) == (m + o + p))) &&
+                                                                                    (((k + m + n) == (m + o + p)))
+                                                                                )
+                                                                            ) {
+                                                                                // There is a new solution detected, so the solution counter variable increases by 1
+                                                                                solutionCounter += 1
+                                                                                /* Then we append a solution (with its data) to the relevant section on the page 
+                                                                                First of all we note how many solutions we're up to
+                                                                                Secondly, we log the numbers that give a consistent magic total
+                                                                                Thirdly, we specify the magic total
+                                                                                and Lastly, we make a new line (<br>)
+                                                                                */
+                                                                                $("#problem7answersparta").append("Solution " + solutionCounter + ": " + [i, j, k, l, m, n, o, p, q] + "; The magic total is " + (i + j + k) + "<br>")
+                                                                                // Then we're going to push the magic total to the list of magic totals (for later)
+                                                                                magicTotals.push(i + j + k)
+                                                                                // Now we're going to check whether this solution that has a consistent vertex sum for the unshaded triangles
+                                                                                if (
+                                                                                    (((j + k + m) == (l + o + m)) && ((j + k + m) == (n + m + p)) && ((j + k + m) == (o + p + q))) &&
+                                                                                    (((l + o + m) == (n + m + p)) && ((l + o + m) == (o + p + q))) &&
+                                                                                    (((n + m + p) == (o + p + q)))
+                                                                                ) {
+                                                                                    // If it does then we're going to 1. Append it to the right section of the page, and 2. Push it to the list of those solutions
+                                                                                    $("#problem7answerspartc").append("Solution " + solutionCounter + ": " + [i, j, k, l, m, n, o, p, q] + "; The magic total is " + (i + j + k) + "; The other magic total is " + (j + k + m) + "<br>")
+                                                                                    partCSolutions.push(0)
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+            }
+            // Append (to the relevant section) the lowest value in the list of all the magic totals
+            $("#problem7answerspartb").append(Math.min(...magicTotals))
+
+            // If no solutions for part C were added to the list (thus its length is zero), then... 
+            if (partCSolutions.length == 0) {
+                // ...make the relevant section say so
+                $("#problem7answerspartc").html("The program yielded no solutions according to the question's requirements")
+            }
+        </script>
     </div>
 
     <h2>Problem 9 (incomplete)<button class="problemState" id="button8">⏶</button></h2>
