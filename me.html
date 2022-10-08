@@ -541,7 +541,7 @@
 
     </div>
 
-    <h2>Problem 2 (incomplete) <button class="problemState" id="button1">⏶</button></h2>
+    <h2>Problem 2 <button class="problemState" id="button1">⏶</button></h2>
     <div id="problem1">
         <h3>a)</h3> \(ps+qt+ru=pu+qs+rt=pt+qu+rs\) <br><br>
         \(qt+ru-qs-rs=pu+rt-ps-rs=pt+qu-ps-qs\)<br><br>
@@ -552,8 +552,16 @@
         \(qx-rx=py-ry\)<br>\(qx-px=qy-ry\)<br>\(rx-px=qy-py\)<br><br>
         \(x\left(q-r\right)=y\left(p-r\right)\)<br>\(x\left(q-p\right)=y\left(q-r\right)\)<br>\(x\left(r-p\right)=y\left(q-p\right)\)<br><br>
         \(\frac{x}{y}=\frac{p-r}{q-r}\)<br><br>\(\frac{x}{y}=\frac{q-r}{q-p}\)<br><br>\(\frac{x}{y}=\frac{q-p}{r-p}\)<br><br>
-        <h3>c)</h3> \(\frac{t-s}{u-s}=\frac{p-r}{q-r}\)<br><br>\(\frac{t-s}{u-s}=\frac{q-r}{q-p}\)<br><br>\(\frac{t-s}{u-s}=\frac{q-p}{r-p}\)<br><br>
-
+        <h3>c)</h3> looking at <br><br>
+        \(\frac{x}{y}=\frac{p-r}{q-r}\) and <br><br>\(\frac{x}{y}=\frac{q-r}{q-p}\)<br><br>
+        we can see that \(\frac{q-r}{q-p}=\frac{p-r}{q-r}\) <br><br>
+        Therefore \(\left(p-r\right)\left(q-p\right)=\left(q-r\right)^{2}\)<br><br>
+        This means that the \(LHS\) must be positive and thus have both positive factors or both negative factors <br><br>
+        Therefore \(q&lt;p&lt;r\) or \(r&lt;p&lt;q\) <br><br>
+        So in view of our previous statements: <br><br>
+        \(\frac{x}{y}=\frac{p-r}{q-r}\) would mean that \({p-r}\) would be negative and \({q-r}\) would be negative. Therefore \(\frac{x}{y}\) is positive <br><br>
+        Whereas for \(\frac{x}{y}=\frac{q-p}{r-p}\), \({q-p}\) would be negative and \({r-p}\) would be positive, so \(\frac{x}{y}\) would be negative<br><br>
+        Therefore x and y must be 0 and because \(x=t-s\) and \(y=u-s\), thus \(s=t=u\)
     </div>
 
     <h2>Problem 3 <button class="problemState" id="button2">⏶</button></h2>
@@ -660,6 +668,27 @@
             }
         </script>
         These numbers are generated from code I created that can be found <a href="https://github.com/frlegg/maths-journal/blob/main/me.html#L636">here</a>
+    </div>
+
+    <h2>Problem 7 <button class="problemState" id="button6">⏶</button></h2>
+    <div id="problem6">
+        <h3>a)</h3> The 2 variable AM-GM inequality states \(\frac{a+b}{2}\ge\sqrt{ab}\) <br>
+        therefore, \(\frac{c+d}{2}\ge\sqrt{cd}\) <br><br>
+        we can rearrange to get \(a+b\ge2\sqrt{ab}\) and \(c+d\ge2\sqrt{cd}\) <br><br>
+        by Rule 5 (in the student notes) we can see \(a+b+c+d\ge2\sqrt{ab}+2\sqrt{cd}\) <br><br>
+        and therefore \(\frac{a+b+c+d}{2}\ge\sqrt{ab}+\sqrt{cd}\) <br><br>
+        By the 2 variable AM-GM inequality, \(\frac{\sqrt{ab}+\sqrt{cd}}{2}\ge\sqrt{\sqrt{ab}\sqrt{cd}}\) <br><br>
+        and therefore \(\sqrt{ab}+\sqrt{cd}\ge2\left(abcd\right)^{\frac{1}{4}}\)
+        Therefore, using both of the 2 lines above we can see \(\frac{a+b+c+d}{2}\ge2\left(abcd\right)^{\frac{1}{4}}\), so <br><br>
+        \(\frac{a+b+c+d}{4}\ge\left(abcd\right)^{\frac{1}{4}}\) which completes the proof
+        <h3>b)</h3> This part of the question requires us to use part a. First let \(a=\frac{b+c+d}{3}\) <br><br>
+        \(\frac{b+c+d}{3}\ge\left(\frac{b+c+d}{3}\right)^{\frac{1}{4}}\left(bcd\right)^{\frac{1}{4}}\) <br><br>
+        \(\frac{b+c+d}{3}\left(\frac{3}{b+c+d}\right)^{\frac{1}{4}}\ge\left(bcd\right)^{\frac{1}{4}}\) <br><br>
+        \(\left(\left(\frac{b+c+d}{3}\right)^{4}\right)^{\frac{1}{4}}\left(\frac{3}{b+c+d}\right)^{\frac{1}{4}}\ge\left(bcd\right)^{\frac{1}{4}}\) <br><br>
+        \(\left(\frac{3}{b+c+d}\cdot\left(\frac{b+c+d}{3}\right)^{4}\right)^{\frac{1}{4}}\ge\left(bcd\right)^{\frac{1}{4}}\) <br><br>
+        \(\left(\left(\frac{b+c+d}{3}\right)^{3}\right)^{\frac{1}{4}}\ge\left(bcd\right)^{\frac{1}{4}}\) <br><br>
+        \(\left(\frac{b+c+d}{3}\right)^{\frac{3}{4}}\ge\left(bcd\right)^{\frac{1}{4}}\) <br><br>
+        \(\frac{b+c+d}{3}\ge\left(bcd\right)^{\frac{1}{3}}\)<br>
     </div>
 
     <h2>Problem 8<button class="problemState" id="button7">⏶</button></h2>
@@ -835,6 +864,17 @@
         Values of \(4^{a}\) are always even, whereas values of \(5^{b}\) are always odd. <br><br>
         Therefore \(4^{a}\) cannot equal \(5^{b}\) <br><br>
     </div>
+
+    <h2>Problem 11<button class="problemState" id="buttona">⏶</button></h2>
+    <div id="problema">
+        <img src="./assets/problem-11.png"><br><br>
+        All sides will be equal if \(\triangle AED\) is congruent with \(\triangle CFB\) <br><br>
+        1. \(AB = CD\) in length (as assumed by the question) <br><br>
+        2. Angles with one line are equal because <br> a) \(AD\) and \(CB\) are parallel (as \(AB = CD\) and \(AB\) and \(CD\) are parallel), <br> b) \(AB\) and \(CD\) are parallel, and <br> c) \(ED\) and \(BF\) are parallel (given) <br><br>
+        3. Angles with two lines are equal because <br> a) \(AD\) and \(CB\) are parallel as \(AB = CD\) and \(AB\) and \(CD\) are parallel), <br> b) \(AB\) and \(CD\) are parallel (given), and <br> c) \(AE\) and \(CF\) are parallel (given) <br><br>
+        Therefore, because \(\triangle AED\) shares equality of one side and two angles with \(\triangle CFB\)
+    </div>
+    <br>
 
     <div class="row">
         <a href="https://frlegg.github.io/maths-journal/">Go back to the homepage</a>
